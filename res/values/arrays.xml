@@ -120,4 +120,21 @@
         <item>18</item>
         <item>26</item>
     </string-array>
+
+    <string-array name="updates_schedule_entries">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Never</item>
+        <item>On boot</item>
+    </string-array>
+
+    <string-array name="updates_schedule_entryvalues" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>

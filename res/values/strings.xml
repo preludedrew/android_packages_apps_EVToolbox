@@ -124,4 +124,20 @@
     <string name="pref_cpu_max_freq_summary">%s</string>
     <string name="pref_cpu_set_on_boot">Set on boot</string>
     <string name="pref_cpu_set_on_boot_summary">Restore the processor settings on boot</string>
+
+        <!-- Updates -->
+    <string name="updates_title">Updates</string>
+    <string name="pref_updates_title_head">Updates</string>
+
+        <!-- Updates >> Nightlies -->
+    <string name="menu_refresh">Refresh</string>
+    <string name="pref_updates_nightly_title">Nightlies</string>
+    <string name="pref_updates_nightly_summary">Updates that are compiled nightly\n\tWARNING: These may or may not be stable.</string>
+    <string name="pref_updates_release_title">Releases</string>
+    <string name="pref_updates_release_summary">Updates that are in either preview, alpha or beta form\n\tBug\'s can be reported for these builds.</string>
+    <string name="pref_updates_test_title">Tests</string>
+    <string name="pref_updates_test_summary">Updates that need specific testing done to them\n\tReporting bugs needs to be done on IRC</string>
+    <string name="pref_updates_schedule_title">Check for updates:</string>
+    <string name="pref_updates_schedule_dialog_title">Check for updates</string>
+    <string name="pref_updates_category_available_updates_title">Available Updates</string>
 </resources>

@@ -9,11 +9,13 @@
     
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.HARDWARE_TEST" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-sdk android:minSdkVersion="14" />
+    <uses-sdk android:minSdkVersion="16" />
 
     <application
         android:icon="@drawable/ic_launcher_evtoolbox"
@@ -225,6 +227,54 @@
                 android:resource="@string/pref_performance_title_head" />
             <meta-data android:name="com.evervolv.toolbox.PARENT_FRAGMENT_CLASS"
                 android:value="com.evervolv.toolbox.activities.Performance" />
+        </activity>
+
+        <!-- Updates -->
+        <activity android:name="Settings$UpdatesActivity"
+                android:label="@string/updates_title"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:clearTaskOnLaunch="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.evervolv.toolbox.FRAGMENT_CLASS"
+                android:value="com.evervolv.toolbox.activities.Updates" />
+            <meta-data android:name="com.evervolv.toolbox.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/evervolv_updates" />
+        </activity>
+
+        <activity android:name="Settings$UpdatesNightlyActivity"
+                android:label="@string/pref_updates_nightly_title"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:clearTaskOnLaunch="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <meta-data android:name="com.evervolv.toolbox.FRAGMENT_CLASS"
+                android:value="com.evervolv.toolbox.activities.Updates$Nightly" />
+            <meta-data android:name="com.evervolv.toolbox.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/evervolv_updates" />
+            <meta-data android:name="com.evervolv.toolbox.PARENT_FRAGMENT_TITLE"
+                android:resource="@string/pref_updates_title_head" />
+            <meta-data android:name="com.evervolv.toolbox.PARENT_FRAGMENT_CLASS"
+                android:value="com.evervolv.toolbox.activities.Updates" />
+        </activity>
+
+        <activity android:name="Settings$UpdatesTestActivity"
+                android:label="@string/pref_updates_test_title"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:clearTaskOnLaunch="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <meta-data android:name="com.evervolv.toolbox.FRAGMENT_CLASS"
+                android:value="com.evervolv.toolbox.activities.Updates$Test" />
+            <meta-data android:name="com.evervolv.toolbox.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/evervolv_updates" />
+            <meta-data android:name="com.evervolv.toolbox.PARENT_FRAGMENT_TITLE"
+                android:resource="@string/pref_updates_title_head" />
+            <meta-data android:name="com.evervolv.toolbox.PARENT_FRAGMENT_CLASS"
+                android:value="com.evervolv.toolbox.activities.Updates" />
         </activity>
 
         <receiver android:name=".BootReceiver" android:enabled="true">

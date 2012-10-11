@@ -4,13 +4,13 @@
 
 package com.evervolv.toolbox.utils;
 
-import android.util.Log;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import android.util.Log;
 
 public class FileUtil {
 
@@ -52,5 +52,4 @@ public class FileUtil {
         }
         return true;
     }
-
 }
